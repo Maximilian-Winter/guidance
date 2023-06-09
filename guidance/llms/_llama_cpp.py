@@ -283,7 +283,7 @@ class LlamaCppSession(LLMSession):
             token_healing = self.llm.token_healing
 
         # generate the cache key
-        key = self._cache_key(locals())
+        key = self._gen_key(locals())
 
         # set the stop patterns
         if stop is not None:
